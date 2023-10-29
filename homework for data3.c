@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Defining structure for student information
+
 typedef struct Student {
     int student_number;
     char name[50];
@@ -9,7 +9,7 @@ typedef struct Student {
     struct Student *next;
 } Student;
 
-// Function to insert student information into the linked list
+
 void insert_student(Student **head, int student_number, char *name, int age) {
     Student *new_student = (Student *) malloc(sizeof(Student));
     new_student->student_number = student_number;
@@ -19,7 +19,7 @@ void insert_student(Student **head, int student_number, char *name, int age) {
     *head = new_student;
 }
 
-// Function to print student information
+
 void print_student_info(Student *node) {
     while (node != NULL) {
         printf("Student Number: %d\n", node->student_number);
@@ -29,7 +29,7 @@ void print_student_info(Student *node) {
     }
 }
 
-// Function to count the number of students in the linked list
+
 int count_students(Student *node) {
     int count = 0;
     while (node != NULL) {
@@ -42,12 +42,12 @@ int count_students(Student *node) {
 int main() {
     Student *head = NULL;
 
-    // Inserting students into the linked list
+  
     insert_student(&head, 1, "Alice", 22);
     insert_student(&head, 2, "Bob", 23);
     insert_student(&head, 3, "Charlie", 24);
 
-    // Printing student information and counting the number of students
+
     print_student_info(head);
     int count = count_students(head);
     printf("Number of students: %d\n", count);
