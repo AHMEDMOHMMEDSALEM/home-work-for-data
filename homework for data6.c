@@ -31,5 +31,4 @@ void printRecordWithLongestName(Record* head) {
     }
 }
 
-// Function to insert a new student record to the list
 void insertRecord(Record** head, char* name, int age)
